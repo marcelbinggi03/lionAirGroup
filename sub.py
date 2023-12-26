@@ -112,7 +112,7 @@ menu()
 inputan = int(input("Menu yang akan dipilih (0 untuk mengakhiri):"))
 while inputan != 0:
     getNotif()
-    inputan = input(int("Menu yang akan dipilih (0 untuk mengakhiri):"))
+    inputan = int(input("Menu yang akan dipilih (0 untuk mengakhiri):"))
  
 
 
