@@ -1,6 +1,6 @@
 import paho.mqtt.client as mqtt
 import os
-import jason
+import json
 import datetime
 
 
@@ -58,7 +58,7 @@ def cekKode(kodePenerbangan):
 
     """
     global arrOfMsgObj
-    for i msgObj in arrOfMsgObj:
+    for msgObj in arrOfMsgObj:
         if kodePenerbangan in msgObj["kode"]:
             return True
         else:
@@ -109,7 +109,7 @@ def getNotif():
 # main
 
 menu()
-inputan = input(int("Menu yang akan dipilih (0 untuk mengakhiri):"))
+inputan = int(input("Menu yang akan dipilih (0 untuk mengakhiri):"))
 while inputan != 0:
     getNotif()
     inputan = input(int("Menu yang akan dipilih (0 untuk mengakhiri):"))
