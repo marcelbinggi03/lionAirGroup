@@ -35,16 +35,16 @@ def on_message(client,userdata, message):
         # tulis jadwal baru ke dalam file "boarding.txt" (waktu keberangkatan)
 
         with open('boarding.txt', 'a') as f:
-            f.write("Kode Penerbangan : "+messageObj["kode"]"\n"
-                    "Tanggal Keberangkatan : "+messageObj["tanggal"]"\n"
+            f.write("Kode Penerbangan : "+messageObj["kode"]+"\n"
+                    "Tanggal Keberangkatan : "+messageObj["tanggal"]+"\n"
                     "Diterima pada : "+ waktuTerima +"\n")
             
 
         # tulis jadwal baru ke dalam file "lokasi.txt" (kota tujuan dan asal penerbangan)
         with open('lokasi.txt', 'a') as f:
-            f.write("Kode Penerbangan : "+messageObj["kode"]"\n"
-                    "Asal : "+messageObj["kotaAsal"]"\n"
-                    "Tujuan : "+messageObj["kotaTujuan"]"\n"
+            f.write("Kode Penerbangan : "+messageObj["kode"]+"\n"
+                    "Asal : "+messageObj["kotaAsal"]+"\n"
+                    "Tujuan : "+messageObj["kotaTujuan"]+"\n"
                     "Diterima pada : "+ waktuTerima +"\n")
 
 
